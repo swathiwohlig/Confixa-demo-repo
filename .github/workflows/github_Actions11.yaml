@@ -1,0 +1,19 @@
+name: Github Actions Automated
+
+on:
+  push:
+    branches: [ "main" ]
+    
+jobs:
+  build_and_push:
+    name: Build committed code and push to Docker Hub
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      -  name: Show git status
+         run: |
+                git status
+
+      
